@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--This page is to add a poll to the database-->
+<html>
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Add Test Object</title>
+	</head>
+	<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+	<body>
+		<nav th:insert="fragments/navbar.html :: navbar"></nav>
+		<div class="container">
+			<h1>Add a New Test Object!</h1>
+			<form method="post" action="../secure/secureIndex" th:action="@{/secure/addTestObjectMethod}" th:object="${testObject}">
+				Your Name: <input type="text" th:field="*{name}" required /><br>
+				Your Age: <input type="number" th:field="*{age}" required /><br>
+				Your Birthday: <input type="date" th:field="*{birthday}" required /><br>
+				<input class="button" type="submit" value="Add!">
+			</form>
+		</div>
+	</body>
+
+</html>

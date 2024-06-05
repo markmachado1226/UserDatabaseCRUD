@@ -1,0 +1,99 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: url(../images/background.png);
+	background-size: cover;
+	background-position: center;
+	opacity: 1;
+	margin: 0;
+	padding-top: 50px;
+}
+
+nav {
+	background-color: rgb(64, 0, 64);
+	color: darksalmon;
+	padding: 10px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	text-align: center;
+	justify-content: space-evenly;
+}
+
+nav ul li {
+	margin-right: 15px;
+	transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+	background-color: rgb(128, 0, 64);
+}
+
+nav ul li a {
+	color: darksalmon;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	padding: 5px 10px;
+}
+
+nav ul li a:active,
+nav ul li a:focus {
+	background-color: #fff;
+	color: #333;
+}
+
+.container {
+	background-color: rgb(64, 0, 64);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+	border-style: solid;
+	padding: 100px;
+	font-size: 30px;
+	color: darksalmon;
+}
+
+input[type="text"],
+input[type="submit"],
+label {
+	margin-bottom: 15px;
+}
+
+#pollList {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding: 10px;
+}
+
+.error {
+	color: red;
+}
+
+.button {
+	background-color: rgb(64, 0, 64);
+	color: darksalmon;
+}

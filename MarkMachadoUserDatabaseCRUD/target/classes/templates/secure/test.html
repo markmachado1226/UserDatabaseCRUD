@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<!--This page is to test sessions-->
+<body>
+	<div th:text="${session.myTest}"></div>
+	<div><a th:href="@{/test}">Reload</a></div>
+	<div th:text="${session.sessionID}"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--This is a fragment to put in every secure page to logout at any time-->
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
+
+	<body>
+		<div th:fragment="logout">
+			<form method="get" action="#" th:action="@{/logout}">
+				<input class="button" type="submit" value="Logout" />
+			</form>
+		</div>
+	</body>
+
+</html>

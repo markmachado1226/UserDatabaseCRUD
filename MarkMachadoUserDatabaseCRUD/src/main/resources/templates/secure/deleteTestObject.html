@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--This page is to use to delete polls-->
+<html>
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Delete Test Object</title>
+	</head>
+	<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+	<body>
+		<nav th:insert="fragments/navbar.html :: navbar"></nav>
+		<div class="container">
+			<h1>Test Object Delete!</h1>
+			<!-- Form Binded and creates a drop down menu of the Polls and listed as their title-->
+			<form method="post" action="#" th:action=@{/secure/deleteTestObjectMethod} th:object="${testObject}">
+				<select th:field="*{id}">
+					<option th:each="s : ${testObjectList}" th:value="${s.id}" th:text="${s.name}"></option>
+				</select>
+				<input class="button" type="submit" value="Delete!!">
+			</form>
+		</div>
+	</body>
+
+</html>

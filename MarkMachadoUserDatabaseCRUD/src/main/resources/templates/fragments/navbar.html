@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--This is a navbar to navigate through the website when you are anywhere in the website-->
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
+
+	<body>
+		<div th:fragment="navbar">
+			<nav>
+				<ul>
+					<li><a th:href="@{/secure}">Home</a></li>
+					<li><a th:href="@{/secure/pickTestObject}">Pick Object</a></li>
+					<li><a th:href="@{/secure/addTestObject}">Add an Object</a></li>
+					<li><a th:href="@{/secure/deleteTestObject}">Delete an Object</a></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--This is the page where the user logs in or choose to register-->
+<html>
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
+	<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+	<body>
+		<div class="container">
+			<h1>Login Here!</h1>
+			<form method="post" th:action="@{/login}">
+				Email: <input type="email" name="username" /><br>
+				Password: <input type="password" name="password" /><br>
+				<input class="button" type="submit" value="Log In" name="login-submit" />
+				<div th:if="${param.error}">
+					<div class="error">
+						Invalid credentials
+					</div>
+					<div th:if="${param.logout}">
+						<div class="success">
+							You have been logged out
+						</div>
+					</div>
+				</div>
+			</form>
+			<p><a th:href="@{/register}">Register a new User!</a></p>
+		</div>
+	</body>
+
+</html>

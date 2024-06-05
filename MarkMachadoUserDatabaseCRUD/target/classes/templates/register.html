@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--This is where the user registers their own user and uses java script to verify the password-->
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+<body>
+	<div class="container">
+		<h1>Register Here!</h1>
+		<div id="error" class="error"></div>
+		<form name="form" action="#" th:action="@{/register}" method="post" onsubmit="return verify()">
+			First Name: <input type="text" name="firstName" required /><br>
+			Last Name: <input type="text" name="lastName" required /><br>
+			Email: <input type="email" name="username" required /><br>
+			Password: <input type="password" name="password" required /><br>
+			Verify Password: <input type="password" name="verifyPassword" required /><br>
+			Role:
+			<select name="role" required>
+				<option value="USER">USER</option>
+				<option value="ADMIN">ADMIN</option>
+			</select><br>
+			<input class="button" type="submit" value="Add User">
+		</form>
+	</div>
+</body>
+
+</html>

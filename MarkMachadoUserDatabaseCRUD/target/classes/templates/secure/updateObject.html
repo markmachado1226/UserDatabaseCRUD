@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Update Object Page</title>
+</head>
+<!--This takes the selected poll questions and answers and presents them in a table to vote. -->
+<!--Each field also has the id hidden so it can be used in the next controller-->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+<body>
+	<nav th:insert="fragments/navbar.html :: navbar"></nav>
+	<div class="container">
+		<form method="post" action="../secure/secureIndex" th:action="@{'/secure/updateObject/' + ${selectedObject.id}}"
+			th:object="${selectedObject}">
+			<h2 th:text="${selectedObject.name} + ' is your current name'"></h2>
+						<h3>Type here to change your name</h3>
+						<input type="text" th:field="*{name}" />
+						<h3>Your age currently is <h3 th:text="${selectedObject.age}"></h3> Change your age here</h3>
+						<br>
+						<input type="number" th:field="*{age}" />
+						<h3 th:text="${selectedObject.birthday} + ' is your current birthday, change here'"></h3>
+						<input type="date" th:field="*{birthday}" />
+						<br>
+			<input class="button" type="submit" value="Update"></input>
+		</form>
+	</div>
+</body>
+
+</html>

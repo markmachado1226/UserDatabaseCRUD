@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--This page is to pick a poll from the current collection-->
+<html>
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Pick a Test Object Page</title>
+	</head>
+	<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+	<nav th:insert="fragments/navbar.html :: navbar"></nav>
+
+	<body>
+		<h1>This is the Pick a Test Object Page</h1>
+		<br>
+		<div class="container">
+			<h1>Test Objects currently recorded</h1>
+			<form method="get" action="#" th:action="@{/secure/updateObject}" th:object="${testObject}">
+				<select th:field="*{id}">
+					<option th:each="s : ${testObjectList}" th:value="${s.id}" th:text="${s.name}"></option>
+				</select>
+				<br>
+				<input class="button" type="submit" value="Update This Object">
+			</form>
+		</div>
+	</body>
+
+</html>

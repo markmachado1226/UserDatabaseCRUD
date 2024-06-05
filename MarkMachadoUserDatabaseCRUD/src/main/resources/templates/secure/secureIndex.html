@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--This is the secure index and it displays all polls that are already completed-->
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Title!</title>
+
+</head>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+<body>
+	<nav th:insert="fragments/navbar.html :: navbar"></nav>
+	<div class="container">
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Birthday</th>
+			</tr>
+			<tr th:each="p:${testObjectList}">
+				<td th:text="${p.id}" hidden></td>
+				<td th:text="${p.name}"></td>
+				<td th:text="${p.age}"></td>
+				<td th:text="${p.birthday}"></td>
+			</tr>
+		</table>
+	</div>
+	<footer th:insert="fragments/logout.html :: logout"></footer>
+</body>
+
+</html>
